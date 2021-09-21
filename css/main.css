@@ -1,0 +1,557 @@
+
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+body {  
+  color: #ffffec;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0rem;
+  overflow-x: hidden;
+  background: linear-gradient(180deg, #001922 0%, #01445a  90%);
+}
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #022f40;
+  margin: 0;
+}
+a:hover {
+  color: #022f40;
+}
+a:focus {
+  color: #022f40;
+}
+i{
+  vertical-align: middle;
+}
+
+body .wrapper {
+  background:transparent;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+}
+.link_active{
+    padding: 10px !important;
+   
+    background-color: #022f40 !important;
+    color: #ffffec !important;
+}
+.logo-div{
+  width: inherit;
+  position: absolute;
+  top: 0%;
+  left: 10%;
+}
+@media (max-width:640px){
+  .menu__list li a:hover:before{
+    font-size: 6rem;
+  }
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+/*Main covid content*/
+.jumbotron{
+    min-height: 100vh;
+    width: 100vw;
+    background-color: transparent !important;
+}
+#moto{
+    position: relative;
+    top: 25vh;
+    left: 10vw;
+    height: 300px;
+    width: 500px;
+    font-size: 3rem;
+    color: ivory;
+    float: left;
+}
+#moto span{
+    color:#00ceba;
+}
+#moto p{
+    text-align: justify;
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    margin-bottom: 7vh;
+}
+#moto a{
+    color: ivory;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 500px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 10;
+    background: linear-gradient(to right, #4bbdda, #0179be); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+#moto a:hover{
+  background: linear-gradient(to right, #0179be, #4bbdda); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+#image_intro{
+    background: url(../assets/Main_art4.svg);
+    background-repeat: no-repeat;
+}
+#intro_covid,#symptoms_covid{
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+  
+}
+.main_intro{
+  top: 25%;
+  left: 7%;
+}
+.symptoms_intro{
+  top: 5%;
+  left: 17.5%;
+}
+.main_intro,.symptoms_intro{
+  position: relative;
+  
+  float: left;
+}
+.main_intro h1,.symptoms_intro h1{
+  font-size: 4rem;
+  color: ivory;
+}
+.main_intro p,.symptoms_intro p{
+ font-size: 2rem;
+ line-height: 30px;
+ color: ivory;
+}
+.main_intro a,.symptoms_intro a{
+ text-decoration: none;
+ color: #77e8e8;
+}
+.symptoms_intro span{
+  color: #00ceba
+}
+#topics{
+  position: relative;
+  top: 15%;
+  left:15%;
+  
+}
+ .container_grid {
+    display: grid;
+    grid-template-columns: .4fr .4fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 50px;
+    justify-items: stretch;
+    align-items: stretch;
+ }
+ .container_grid h1{
+   font-size: 2rem;
+   color: #77e8e8;
+ }
+ 
+.container_grid p{
+  font-size: 1.4rem;
+  line-height: 30px;
+}
+.container_grid button{
+  
+  background: #77e8e8;
+  color: white;
+  font-size: 3rem;
+  padding: 25px;
+  border: none;
+  outline: none;
+  border-radius:50% ;
+}
+.container_grid i{
+  color: #022f40;
+}
+
+
+  /*Particles*/        
+.particle {
+  position: absolute;
+
+  
+}
+
+@-webkit-keyframes particle-animation-1 {
+  100% {
+    -webkit-transform: translate3d(5vw, 10vh, 20px);
+            transform: translate3d(5vw, 10vh, 20px);
+  }
+}
+
+@keyframes particle-animation-1 {
+  100% {
+    -webkit-transform: translate3d(5vw, 10vh, 20px);
+            transform: translate3d(5vw, 10vh, 20px);
+  }
+}
+.particle:nth-child(1) {
+  -webkit-animation: particle-animation-1 40s infinite alternate;
+          animation: particle-animation-1 40s infinite alternate;
+  opacity: 1;
+  height: 64px;
+  width: 64px;
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+  -webkit-transform: translate3d(50vw, 46vh, 100px);
+          transform: translate3d(50vw, 46vh, 100px);
+  background:url(../assets/coronavirus.png);
+}
+
+
+@-webkit-keyframes particle-animation-2 {
+100% {
+-webkit-transform: translate3d(64vw, 35vh, 83px);
+    transform: translate3d(64vw, 35vh, 83px);
+}
+}
+
+@keyframes particle-animation-2 {
+100% {
+-webkit-transform: translate3d(64vw, 35vh, 83px);
+    transform: translate3d(64vw, 35vh, 83px);
+}
+}
+.particle:nth-child(2) {
+-webkit-animation: particle-animation-2 40s infinite alternate;
+  animation: particle-animation-2 40s infinite alternate;
+opacity: 1;
+height: 64px;
+width: 64px;
+-webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+-webkit-transform: translate3d(82vw, 73vh, 90px);
+  transform: translate3d(82vw, 73vh, 90px);
+background:url(../assets/coronavirus.png);
+}
+
+@-webkit-keyframes particle-animation-3 {
+100% {
+-webkit-transform: translate3d(11vw, 70vh, 65px);
+    transform: translate3d(11vw, 70vh, 65px);
+}
+}
+
+@keyframes particle-animation-3 {
+100% {
+-webkit-transform: translate3d(11vw, 70vh, 65px);
+    transform: translate3d(11vw, 70vh, 65px);
+}
+}
+.particle:nth-child(3) {
+-webkit-animation: particle-animation-3 40s infinite alternate;
+  animation: particle-animation-3 40s infinite alternate;
+opacity: 1;
+height: 64px;
+width: 64px;
+-webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+-webkit-transform: translate3d(47vw, 60vh, 77px);
+  transform: translate3d(47vw, 60vh, 77px);
+background:url(../assets/coronavirus.png);
+}
+
+@-webkit-keyframes particle-animation-4 {
+100% {
+-webkit-transform: translate3d(0vw, 43vh, 39px);
+    transform: translate3d(0vw, 43vh, 39px);
+}
+}
+
+@keyframes particle-animation-4 {
+100% {
+-webkit-transform: translate3d(4vw, 43vh, 39px);
+    transform: translate3d(4vw, 43vh, 39px);
+}
+}
+.particle:nth-child(4) {
+-webkit-animation: particle-animation-4 40s infinite alternate;
+  animation: particle-animation-4 40s infinite alternate;
+opacity: 1;
+height: 64px;
+width: 64px;
+-webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+-webkit-transform: translate3d(34vw, 17vh, 66px);
+  transform: translate3d(34vw, 17vh, 66px);
+background:url(../assets/coronavirus.png);
+}
+
+@-webkit-keyframes particle-animation-5 {
+  100% {
+    -webkit-transform: translate3d(70vw, 25vh, 81px);
+            transform: translate3d(70vw, 25vh, 81px);
+  }
+}
+
+@keyframes particle-animation-5 {
+  100% {
+    -webkit-transform: translate3d(70vw, 25vh, 81px);
+            transform: translate3d(70vw, 25vh, 81px);
+  }
+}
+.particle:nth-child(5) {
+  -webkit-animation: particle-animation-5 40s infinite alternate;
+          animation: particle-animation-5 40s infinite alternate;
+  opacity: 1;
+  height: 64px;
+  width: 64px;
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+  -webkit-transform: translate3d(99vw, 80vh, 70px);
+          transform: translate3d(99vw, 80vh, 70px);
+  background: url(../assets/coronavirus.png);
+}
+
+@-webkit-keyframes particle-animation-6 {
+  100% {
+    -webkit-transform: translate3d(25vw, 35vh, 3px);
+            transform: translate3d(25vw,35vh, 3px);
+  }
+}
+
+@keyframes particle-animation-6 {
+  100% {
+    -webkit-transform: translate3d(25vw, 35vh, 3px);
+            transform: translate3d(25vw, 35vh, 3px);
+  }
+}
+.particle:nth-child(6) {
+  -webkit-animation: particle-animation-6 40s infinite alternate;
+          animation: particle-animation-6 40s infinite alternate;
+  opacity: 1;
+  height: 64px;
+  width: 64px;
+  -webkit-animation-delay: -5.2s;
+          animation-delay: -5.2s;
+  -webkit-transform: translate3d(4vw, 83vh, 30px);
+          transform: translate3d(4vw, 83vh, 30px);
+  background: url(../assets/coronavirus.png);
+}
+
+@-webkit-keyframes particle-animation-7 {
+  100% {
+    -webkit-transform: translate3d(50vw, 50vh, 8px);
+            transform: translate3d(50vw, 50vh, 8px);
+  }
+}
+
+@keyframes particle-animation-7 {
+  100% {
+    -webkit-transform: translate3d(50vw, 50vh, 8px);
+            transform: translate3d(50vw, 50vh, 8px);
+  }
+}
+.particle:nth-child(7) {
+  -webkit-animation: particle-animation-7 40s infinite alternate;
+          animation: particle-animation-7 40s infinite alternate;
+  opacity: 1;
+  height: 64px;
+  width: 64px;
+  -webkit-animation-delay: -5.4s;
+          animation-delay: -5.4s;
+  -webkit-transform: translate3d(76vw, 44vh, 40px);
+          transform: translate3d(76vw, 44vh, 40px);
+  background: url(../assets/coronavirus.png);
+}
+
+@-webkit-keyframes particle-animation-8 {
+  100% {
+    -webkit-transform: translate3d(45vw, 75vh, 34px);
+            transform: translate3d(45vw, 75vh, 34px);
+  }
+}
+
+@keyframes particle-animation-8 {
+  100% {
+    -webkit-transform: translate3d(45vw, 75vh, 34px);
+            transform: translate3d(45vw, 75vh, 34px);
+  }
+}
+.particle:nth-child(8) {
+  -webkit-animation: particle-animation-8 40s infinite alternate;
+          animation: particle-animation-8 40s infinite alternate;
+  opacity: 1;
+  height: 64px;
+  width: 64px;
+  -webkit-animation-delay: -5.6s;
+          animation-delay: -5.6s;
+  -webkit-transform: translate3d(25vw, 80vh, 55px);
+          transform: translate3d(25vw, 80vh, 55px);
+  background: url(../assets/coronavirus.png);
+}
+
+@-webkit-keyframes particle-animation-9 {
+  100% {
+    -webkit-transform: translate3d(80vw, 22vh, 21px);
+            transform: translate3d(80vw, 22vh, 21px);
+  }
+}
+
+@keyframes particle-animation-9 {
+  100% {
+    -webkit-transform: translate3d(80vw, 22vh, 21px);
+            transform: translate3d(80vw, 22vh, 21px);
+  }
+}
+.particle:nth-child(9) {
+  -webkit-animation: particle-animation-9 40s infinite alternate;
+          animation: particle-animation-9 40s infinite alternate;
+  opacity: 1;
+  height: 64px;
+  width: 64px;
+  -webkit-animation-delay: -5.8s;
+          animation-delay: -5.8s;
+  -webkit-transform: translate3d(90vw, 50vh, 17px);
+          transform: translate3d(90vw, 50vh, 17px);
+  background: url(../assets/coronavirus.png);
+}
+
+@-webkit-keyframes particle-animation-10 {
+  100% {
+    -webkit-transform: translate3d(34vw, 30vh, 67px);
+            transform: translate3d(34vw, 30vh, 67px);
+  }
+}
+
+@keyframes particle-animation-10 {
+  100% {
+    -webkit-transform: translate3d(34vw, 30vh, 67px);
+            transform: translate3d(34vw, 30vh, 67px);
+  }
+}
+.particle:nth-child(10) {
+  -webkit-animation: particle-animation-10 40s infinite alternate;
+          animation: particle-animation-10 40s infinite alternate;
+  opacity: 1;
+  height: 64px;
+  width: 64px;
+  -webkit-animation-delay: -6s;
+          animation-delay: -6s;
+  -webkit-transform: translate3d(74vw, 6vh, 31px);
+          transform: translate3d(74vw, 6vh, 31px);
+  background: url(../assets/coronavirus.png);
+}
+
+
+/*3*/
+#sickman,#image_intro{
+    position: relative;
+    top:15vh;
+    left: 48vw;
+    width: 700px;
+    height: 650px;
+    
+}
+#sickman{
+    background: url(../assets/sickman-01.svg);
+    background-repeat: no-repeat;
+}
+.symptoms_intro ul li{
+  text-align: justify;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  list-style:disc;
+  
+  
+}
+.symptoms_intro b{
+  color: #00ceba;
+font-size: 2rem;
+text-decoration: underline;
+}
+.symptoms_intro p{
+  font-size:2rem !important;
+}
+/*4*/
+
+#prevention_intro{
+  text-align: center;
+}
+#prevention_intro h1{
+  font-size:4rem;
+}
+#prevention_intro p{
+  font-size:1.5rem;
+  line-height:25px;
+}
+#prevention_cards{
+  margin-top: 5em;
+  display: flex;
+  justify-content: space-evenly;
+}
+/*cards*/
+
+.card-container{
+  perspective: 900px;
+  margin-right: 20px;
+}
+
+.card{
+  position: relative;
+  width: 200px;
+  height: 300px;
+  transition: all 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.front,.back{
+  position: absolute;
+  background: #ffffec;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 300px;
+  border-radius: 5px;
+  color:#022f40;
+  text-align: center;
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+  backface-visibility: hidden;
+}
+
+.front{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+.front img{
+  max-width: 90%;
+}
+
+.back{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.card-container:hover .card{
+  transform: rotateY(180deg);
+}
+
+.back{
+  transform: rotateY(180deg);
+}

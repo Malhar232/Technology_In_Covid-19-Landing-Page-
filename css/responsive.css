@@ -1,0 +1,434 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 325px) and (max-device-width : 480px) {
+    
+    .menu__list li a:hover:before{
+        font-size: 6rem ;
+    }
+    #moto a {
+        font-size: 2rem;
+    }
+    #image_intro {
+        top: 67vh;
+        left: 0px;
+        width: 418px;
+    }
+    #moto {
+        top: 10vh;
+        left: 7vw;
+        width: 350px;
+        font-size: 2.5rem;
+        
+    }
+    .particle:nth-child(1){
+        transform: translate3d(65vw, 46vh, 100px);
+    }
+    .particle:nth-child(2){
+        transform: translate3d(82vw, 73vh, 90px);
+    }
+    .particle:nth-child(3) {
+        transform: translate3d(89vw, 170vh, 77px);
+    }
+    .particle:nth-child(4) {
+        transform: translate3d(34vw, 17vh, 66px);
+    }
+    .particle:nth-child(6) {
+        transform: translate3d(51vw, 114vh, 30px);
+    }
+    .particle:nth-child(8) {
+        transform: translate3d(0vw, 150vh, 55px);
+    }
+    .particle:nth-child(9) {
+        transform: translate3d(90vw, 50vh, 17px);
+    }
+    .particle:nth-child(5),.particle:nth-child(7),.particle:nth-child(10)
+    {
+        opacity: 0;
+    }
+    .main_intro {
+        top: 20%;
+        left: 5%;
+        text-align: center;
+    
+    }    
+    .main_intro p{
+        font-size: 1.6rem;
+        
+    }
+    .container_grid {
+       display: block;
+    }
+    #topics{
+        top: 20%;
+        left:10%;
+    }
+    #symptoms_covid,#intro_covid,#prevention_intro{
+        height: 100%;
+        width: 100%;
+        margin-top: 10vh
+    }
+    .symptoms_intro
+    {   left: 0;
+        text-align: center;
+        float: none ;
+    }
+    .symptoms_intro ul
+    {   position: relative;
+        left: 20%;
+       
+    }
+    #sickman{
+    top: 5vh;
+    left: -13vw;
+    width: 500px;
+    height: 450px;
+
+    }
+    #prevention_cards{
+        display: block;
+    }
+    .card-container{
+        margin-right: 0;
+        padding-top: 2vh;
+    }
+    .card{
+        margin: 0 auto;
+    }
+    .card,.front,.back{
+        width: 400px;
+    }
+}
+    
+    /* Smartphones (portrait) ----------- */
+    @media only screen and (min-width : 321px) {
+        
+    
+    }
+    
+    /* Smartphones (landscape) ----------- */
+    @media only screen and (max-width : 320px) {
+        #moto{
+            top: 15vh;
+            font-size:2rem;
+            width: 260px;
+        }
+        #moto a{
+            font-size:2rem;
+        }
+        #image_intro {
+           
+            top: 95vh;
+            left: 0;
+            width: 325px;
+        } 
+        .particle:nth-child(1){
+            transform: translate3d(65vw, 46vh, 100px);
+        }
+        .particle:nth-child(2){
+            transform: translate3d(82vw, 73vh, 90px);
+        }
+        .particle:nth-child(3) {
+            transform: translate3d(89vw, 170vh, 77px);
+        }
+        .particle:nth-child(4) {
+            transform: translate3d(34vw, 17vh, 66px);
+        }
+        .particle:nth-child(6) {
+            transform: translate3d(51vw, 114vh, 30px);
+        }
+        .particle:nth-child(8) {
+            transform: translate3d(0vw, 150vh, 55px);
+        }
+        .particle:nth-child(9) {
+            transform: translate3d(90vw, 50vh, 17px);
+        }
+        .particle:nth-child(5),.particle:nth-child(7),.particle:nth-child(10)
+        {
+            opacity: 0;
+
+        }       
+        #symptoms_covid,#prevention_intro{
+            height: 100%;
+            margin-top: 15vh
+        }
+        #intro_covid{
+            height: 100%;
+            margin-top:25vh;
+        }
+        .menu__list li a:hover:before{
+            font-size: 4rem ;
+        }
+  
+        .main_intro {
+            top: 20%;
+            left: 5%;
+            text-align: inherit;
+        
+        }    
+        .main_intro p{
+            font-size: 1.6rem;
+            
+        }
+        .container_grid {
+           display: block;
+        }
+        #topics{
+            top: 20%;
+            left:10%;
+        }
+  
+        .symptoms_intro
+        {   left: 0;
+            text-align: center;
+            float: none ;
+        }
+        .symptoms_intro ul
+        {   position: relative;
+            left: 20%;
+           
+        }
+        #sickman {
+            top: 5vh;
+            left: 0;
+            width: 307px;
+            height: 265px;
+        }
+        #prevention_cards{
+            display: block;
+        }
+        .card-container{
+            margin-right: 0;
+            padding-top: 2vh;
+        }
+        .card{
+            margin: 0 auto;
+        }
+        .card,.front,.back{
+            width: 300px;
+        }
+        .main_intro h1,.symptoms_intro h1{
+            font-size: 3rem;
+        }
+        .container_grid p {
+            font-size: 1.4rem;
+            line-height: 24px;
+            padding-right: 40vw;
+        }
+    }
+    
+
+    /* iPads (landscape) ----------- */
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    
+    }
+    
+    /* iPads (portrait) ----------- */
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+        #image_intro{
+            left: 0;
+            top: 50vh;
+        }
+        #moto{
+            top: 10vh;
+        }
+        .container_grid {
+            display: block;
+         }
+         #symptoms_covid,#intro_covid,#prevention_intro{
+            height: 100%;
+            width: 100%;
+            margin-top: 10vh
+        }
+        .symptoms_intro
+        {   left: 0;
+            text-align: center;
+            float: none ;
+        }
+        .symptoms_intro ul
+        {   position: relative;
+            left: 20%;
+           
+        }
+        .main_intro{
+            float: none ;
+        }
+        #topics{
+            top: 20%;
+            left:10%;
+        }
+        #sickman{
+            top: 5vh;
+            left: 5vh;
+        }
+        .card,.front,.back{
+            width: 140px;
+
+        }
+        .particle:nth-child(1){
+            transform: translate3d(65vw, 46vh, 100px);
+        }
+        .particle:nth-child(2){
+            transform: translate3d(82vw, 73vh, 90px);
+        }
+        .particle:nth-child(3) {
+            transform: translate3d(89vw, 170vh, 77px);
+        }
+        .particle:nth-child(4) {
+            transform: translate3d(34vw, 17vh, 66px);
+        }
+        .particle:nth-child(6) {
+            transform: translate3d(51vw, 114vh, 30px);
+        }
+        .particle:nth-child(8) {
+            transform: translate3d(0vw, 150vh, 55px);
+        }
+        .particle:nth-child(9) {
+            transform: translate3d(90vw, 50vh, 17px);
+        }
+        .particle:nth-child(5),.particle:nth-child(7),.particle:nth-child(10)
+        {
+            opacity: 0;
+        }
+    }
+    /**********
+    iPad 3
+    **********/
+   
+    /* Desktops and laptops ----------- */
+    @media only screen  and (min-width : 1224px) {
+        .menu__list li a:hover:before{
+            font-size: 15rem ;
+        }
+    }
+    
+    /* Large screens ----------- */
+    @media only screen  and (min-width : 1824px) {
+    
+    }
+    
+
+    
+    /* iPhone 6, 7, 8 ----------- */
+    @media only screen and (min-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+        #moto p{
+            padding: 0 10vw 0 0px;
+        }
+        #intro_covid{
+            padding: 0 10vw 0 0;
+            margin-top: 25vh
+        }
+        #symptoms_covid p,#prevention_intro p{
+            text-align: start;
+            padding: 0 10vw 0 10vw;
+        }
+        #image_intro{
+            top: 75vh;
+        }
+        .container_grid p {
+            padding-right: 40vw;
+        }
+        #topics{
+            left: 0;
+        }
+    }
+    
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+        #moto p{
+            padding: 0 10vw 0 0px;
+        }
+        #intro_covid{
+            padding: 0 10vw 0 0;
+            margin-top: 25vh
+        }
+        #symptoms_covid p,#prevention_intro p{
+            text-align: start;
+            padding: 0 10vw 0 10vw;
+        }
+        #image_intro{
+            top: 75vh;
+        }
+        .container_grid p {
+            padding-right: 40vw;
+        }
+    }
+    
+    /* iPhone 6+, 7+, 8+ ----------- */
+    @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+        #moto p {
+            margin-bottom: 5vh;
+         
+        }
+    }
+    
+    @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+        #moto p {
+            margin-bottom: 5vh;
+         
+        }
+    }
+    
+    /* iPhone X ----------- */
+    @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+    
+    }
+    
+    @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+        #moto p{
+            padding: 0 10vw 0 0px;
+        }
+        #image_intro{
+            left: -5vw;
+        }
+        #intro_covid{
+            padding: 0 10vw 0 0;
+            
+        }
+        #symptoms_covid p,#prevention_intro p{
+            text-align: start;
+            padding: 0 10vw 0 10vw;
+        }
+    }
+    
+
+
+    /* Samsung Galaxy S5 ----------- */
+    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+    
+    }
+    
+    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+        
+        .menu__list li a:hover:before{
+            font-size: 4rem ;
+        }
+        .card,.front,.back{
+            width: 325px;
+        }
+        #prevention_intro p{
+            padding: 0vh 5vw;
+        }
+        #sickman{
+            left: -20vw;
+            }
+        #moto p {
+                text-align: inherit;
+                padding-right: 10vw;
+            }
+            #topics{
+                top: 20%;
+                left:5%;
+            }
+            #image_intro {
+                top: 80vh;
+                left: -8vw;
+            }
+           #intro_covid{
+              
+                margin-top: 30vh
+            }
+            .main_intro {
+               
+                left: 0%;
+                
+            }    
+        }
+    

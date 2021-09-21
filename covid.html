@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+        <title>Document</title>
+  </head>
+
+  <style>
+    
+    
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&display=swap");
+.nav-opener {
+  display: none;
+}
+.nav-opener:checked ~ .menu {
+  transform: translate(0%, 0px);
+}
+.nav-opener:checked ~ .hamburger-box .hamburger .hamburger__patty:nth-child(1) {
+  transform: translate(0px, 8px) rotate(45deg);
+  background: black;
+  z-index: 100 !important;
+}
+.nav-opener:checked ~ .hamburger-box .hamburger .hamburger__patty:nth-child(2) {
+  transform: rotate(45deg);
+  opacity: 0;
+}
+.nav-opener:checked ~ .hamburger-box .hamburger .hamburger__patty:nth-child(3) {
+  transform: translate(0px, -8px) rotate(-45deg);
+  background: black;
+  z-index: 100 !important;
+}
+
+
+
+
+.hamburger-box {
+  position: absolute;
+  z-index: 100;
+  right: 5.6rem;
+  top: 2.6rem;
+  cursor: pointer;
+  padding: 1.6rem;
+  transition: 0.3s ease-in-out;
+}
+.hamburger-box:hover .hamburger__patty:nth-child(1) {
+  transform: translate(-4px, 1px) rotate(-45deg);
+  width: 2rem;
+  z-index: 100 !important;
+  
+}
+.hamburger-box:hover .hamburger__patty:nth-child(3) {
+  transform: translate(-4px, -1px) rotate(45deg);
+  width: 2rem;
+  z-index: 100 !important;
+  
+}
+
+.hamburger {
+  transform: rotateY(0);
+  position: fixed;
+  z-index: 100 !important;
+}
+.hamburger__patty {
+  width: 3rem;
+  height: 0.2rem;
+  margin: 0 0 0.6rem 0;
+  background: #ffffec;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.hamburger__patty:last-child {
+  margin-bottom: 0;
+}
+
+.menu {
+  background-color: #ffffec;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(150%);
+  transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 99;
+}
+
+.menu__list li a{
+  color: #001a24;
+  display: inline-flex;
+  padding: 0.5rem 0 0.2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  transition: .5s;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 4rem;
+  
+}
+.menu__list:hover li a {
+  color: #001a24;
+}
+.menu__list  li:hover a {
+  color: #001a24;
+  
+}
+.menu__list li a::before{
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: rgba(0, 0, 0, 0.1);
+  
+  z-index: -1;
+  opacity: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 500px;
+  transition: letter-spacing .5s,left .5s;
+}
+.menu__list li a:hover:before {
+  content: attr(data-text);
+  opacity: 1;
+  
+  position: absolute;
+  /* left: 50%; */
+  top: 0%;
+  /* right: 100%; */
+  letter-spacing: 10px;
+  width: 100vw;
+  height: 100vh;
+  color: #ffffff2a !important;
+  
+}
+.menu__list li:nth-child(6n+1) a:before{
+  background-color: #005072;
+}
+.menu__list li:nth-child(6n+2) a:before{
+  background-color: #005072;
+}
+.menu__list li:nth-child(6n+3) a:before{
+  background-color: #005072;
+}
+.menu__list li:nth-child(6n+4) a:before{
+  background-color: #005072;
+}
+.menu__list li:nth-child(6n+5) a:before{
+  background-color: #005072;
+}
+.menu__list li:nth-child(6n+6) a:before{
+  background-color: #005072;
+}
+
+ </style>
+
+  <body>
+    
+    <div class="wrapper">    
+      <div class="logo-div">
+        <h1>LOGO</h1>
+      </div>
+
+      <input type="checkbox" id="nav" class="nav-opener" />
+      <label class="hamburger-box hamburger-box--menu-closed" for="nav">
+        <div class="hamburger">
+          <div class="hamburger__patty"></div>
+          <div class="hamburger__patty"></div>
+          <div class="hamburger__patty"></div>
+        </div>
+      </label>    
+
+      <div class="menu">
+        <ul class="menu__list">
+          <li class="menu__item"><a class="menu__link" href="#" data-text="Home">Home</a></li>
+          <li class="menu__item"><a class="menu__link" href="#" data-text="About">About</a></li>
+          <li class="menu__item"><a class="menu__link" href="#" data-text="Contact">Contact</a></li>
+          <li class="menu__item"><a class="menu__link" href="#" data-text="Gallery">Gallery</a></li>
+          <li class="menu__item"><a class="menu__link" href="#" data-text="News">News</a></li>
+          <li class="menu__item"><a class="menu__link link_active" href="#" data-text="COVID19">COVID-19</a></li>
+        </ul>
+      </div>
+      
+      <div class="jumbotron">
+        <div id="moto">
+            <h1>Together we can fight <span>COVID-19</span></h1>
+            <p> Novel Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
+                Most people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without special treatment.</p>
+                
+                <a href="#">Know More    <i class="fas fa-arrow-right"></i></a>
+            </div>
+        <div id="image_intro"></div>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div id="intro_covid">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="main_intro">
+        <h1>About COVID-19<br>and how it is<br>transmitted</h1>
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing. <br> Officiis laudantium nam minima voluptatem<br> unde voluptatum. Dolore reiciendis  enim illum <br> possimus eum animi voluptatum labore  <br> 
+          <br>
+          <a href="#">Learn More   <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div id="topics">
+        <div class="container_grid">
+          <div>
+            <button>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+            <h1>Contaminated Objects</h1>
+            <p>Lorem ipsum, dolor sit  ut amet ullam tempora quis<br> asperiores aut  dignissimos at pariatur doloribus, vel.<br>asperiores  aut dignissimos at pariatur doloribus, vel.<br>asperiores  aut dignissimos at pariatur doloribus, vel.</p>
+          </div>
+          <div>
+            <button>
+              <i class="fas fa-wind"></i>
+            </button>
+            <h1>Air Transmission</h1>
+            <p>Lorem ipsum, dolor sit  ut amet ullam tempora quis <br>asperiores  aut dignissimos at pariatur doloribus, vel.<br>asperiores  aut dignissimos at pariatur doloribus, vel.<br>asperiores  aut dignissimos at pariatur doloribus, vel.</p>
+          </div>
+          <div>
+            <button>
+              <i class="fas fa-head-side-cough"></i>
+            </button>
+            <h1>Transmission Among Humans</h1>
+            <p>Lorem ipsum, dolor sit  ut amet ullam tempora quis <br>asperiores aut  dignissimos at pariatur doloribus, vel.<br>asperiores  aut dignissimos at pariatur doloribus, vel.<br>asperiores  aut dignissimos at pariatur doloribus, vel.</p>
+          </div>
+          <div>
+            <button>
+              <i class="fas fa-paw"></i>
+            </button>
+            <h1>Transmission From Animals</h1>
+            <p>Lorem ipsum, dolor sit  ut amet ullam tempora quis <br>asperiores  aut dignissimos at pariatur doloribus, vel.<br>asperiores  aut dignissimos at pariatur doloribus, vel.<br>asperiores  aut dignissimos at pariatur doloribus, vel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+<!-- 3 -->
+<div id="symptoms_covid">
+  <div class="symptoms_intro">
+    <h1>Early symptoms<br>of <span>corona virus</span></h1>
+<p>
+  COVID-19 affects different people in different ways. Most infected people<br>will develop mild to moderate illness and recover without hospitalization.
+</p>
+  <b>Most common symptoms:</b>
+  <br><br>
+  <ul>
+    <li>Fever</li>
+    <li>Dry cough</li>
+    <li>Tiredness</li>
+  </ul>
+  <br> 
+  <b>Less common symptoms:</b>
+  <br><br>
+  <ul>
+    <li>Aches and Pains</li>
+    <li>Sore throat</li>
+    <li>Diarrhoea</li>
+    <li>Conjunctivitis</li>
+    <li>Headache</li>
+    <li>Loss of taste or smell</li>
+  </ul>
+  <br> <br>
+  <b>Serious symptoms:</b>
+  <br><br>
+  <ul>
+    <li>Difficulty breathing or shortness of breath</li>
+    <li>Chest pain or pressure</li>
+    <li>Loss of speech or movement</li>
+  </ul>
+    
+  <!-- <p>
+  Seek immediate medical attention if you have serious symptoms.Always call before visiting your doctor or health facility.
+  People<br>with mild symptoms who are otherwise healthy should manage their symptoms at home.
+  On average it takes 5–6 days from<br>when someone is infected with the virus for symptoms to show, however it can take up to 14 days.
+</p> -->
+      <br>
+  </div>
+  <div id="sickman"></div>
+
+</div>
+<!-- 4 -->
+<div id="prevention_covid">
+  <div id="prevention_intro">
+    <h1>How to protect yourself<br>from corona virus</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quasi possimus in hic aut harum! Aliquid, omnis molestiae animi atque a saepe facere.<br> Libero iste quod culpa ab tempora praesentium. Protect yourself and others around you by knowing the facts and taking appropriate precautions. Follow advice <br> provided by your local health authority.</p>
+  </div>
+  
+  <div id="prevention_cards">
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <img src="./assets/social_distancing.svg" alt="">
+        </div>
+        <div class="back">Maintain Social Distancing</div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <img src="./assets/hands.svg" alt="">
+        </div>
+        <div class="back">Wash Your Hands</div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <img src="./assets/home.svg" alt="">
+        </div>
+        <div class="back">Stay Home Stay Safe</div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <img src="./assets/medical.svg" alt="">
+
+        </div>
+        <div class="back">Seek Medical Help</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+  <br><br>
+
+<!-- 5 -->
+<!-- <div id="intro_covid">
+  
+  <div class="main_intro">
+    <h1>About COVID-19<br>and how it is<br>transmitted</h1>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing. <br> Officiis laudantium nam minima voluptatem<br> unde voluptatum. Dolore reiciendis  enim illum <br> possimus eum animi voluptatum labore  <br> 
+      <br>
+      <a href="#">Learn More <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <div id="topics">
+    <div class="container_grid">
+      <div>
+        <button>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <h1>Contaminated Objects</h1>
+        <p>Lorem ipsum, dolor sit  ut amet ullam tempora quis<br> asperiores aut  dignissimos at pariatur doloribus, vel.<br>asperiores  aut dignissimos at pariatur doloribus, vel.<br>asperiores  aut dignissimos at pariatur doloribus, vel.</p>
+      </div>
+      <div>
+        <button>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <h1>Air Transmission</h1>
+        <p>Lorem ipsum, dolor sit  ut amet ullam tempora quis <br>asperiores  aut dignissimos at pariatur doloribus, vel.<br>asperiores  aut dignissimos at pariatur doloribus, vel.<br>asperiores  aut dignissimos at pariatur doloribus, vel.</p>
+      </div>
+      <div>
+        <button>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <h1>Transmission Among Humans</h1>
+        <p>Lorem ipsum, dolor sit  ut amet ullam tempora quis <br>asperiores aut  dignissimos at pariatur doloribus, vel.<br>asperiores  aut dignissimos at pariatur doloribus, vel.<br>asperiores  aut dignissimos at pariatur doloribus, vel.</p>
+      </div>
+      <div>
+        <button>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <h1>Transmission From Animals</h1>
+        <p>Lorem ipsum, dolor sit  ut amet ullam tempora quis <br>asperiores  aut dignissimos at pariatur doloribus, vel.<br>asperiores  aut dignissimos at pariatur doloribus, vel.<br>asperiores  aut dignissimos at pariatur doloribus, vel.</p>
+      </div>
+    </div>
+  </div>
+</div> -->
+  </body>
+</html>
